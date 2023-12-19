@@ -1,0 +1,325 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Student Evaluation System</title>
+    <link rel="stylesheet" href="~/css/site.css">
+    <script src="~/js/site.js"></script>
+
+</head>
+<body>
+    <header>
+        <h1>Student Evaluation System</h1>
+    </header>
+
+    <main>
+        <form id="evaluationForm" action="/submit-evaluation" method="post">
+            <div class="input-box">
+                <label for="studentName">Student Name:</label>
+                <input type="text" id="studentName" name="studentName" required>
+            </div>
+
+            <div class="input-box">
+                <label for="studentID">Student ID:</label>
+                <input type="text" id="studentID" name="studentID" required>
+            </div>
+
+            <div class="input-box">
+                <label for="program">Program:</label>
+                <input type="text" id="program" name="program" required>
+            </div>
+
+            <div class="input-box">
+                <label for="companyInfo">Name and Address of the Company:</label>
+                <textarea id="companyInfo" name="companyInfo" rows="4" required></textarea>
+            </div>
+
+            <div class="input-box">
+                <label for="placementDate">Placement Date:</label>
+                <input type="date" id="placementDate" name="placementDate" required>
+            </div>
+
+            <div class="input-box">
+                <label for="endDate">End Date:</label>
+                <input type="date" id="endDate" name="endDate" required>
+            </div>
+
+            <div class="input-box">
+                <label for="overallAssessment">Overall Training Assessment:</label>
+                <div class="assessment-options-eg">
+                    <label>1 - Very Poor</label>
+                    <label>2 - Poor</label>
+                    <label>3 - Average</label>
+                    <label>4 - Good</label>
+                    <label>5 - Excellent</label>
+                </div>
+            </div>
+
+            <!-- Technical Skills/Ability Section -->
+            <div class="section">
+                <h2>Technical Skills/Ability</h2>
+
+                <!-- Technical Skills/Ability Question 1 -->
+                <div class="rounded-box question-box">
+                    <div class="question-row">
+                        <div class="question">
+                            <label for="techSkillsQ1">1. Able to demonstrate the level technical knowledge is competent for working requirements (i.e. programming, networks, servers, and etc):</label>
+                        </div>
+                        <div class="assessment-options">
+                            <label><input type="radio" name="techSkillsQ1" value="1"> 1</label>
+                            <label><input type="radio" name="techSkillsQ1" value="2"> 2</label>
+                            <label><input type="radio" name="techSkillsQ1" value="3"> 3</label>
+                            <label><input type="radio" name="techSkillsQ1" value="4"> 4</label>
+                            <label><input type="radio" name="techSkillsQ1" value="5"> 5</label>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+                <!-- Technical Skills/Ability Question 2 -->
+                <div class="rounded-box question-box">
+                    <div class="question-row">
+                        <div class="question">
+                            <label for="techSkillsQ2">2. Able to perform the relevant practical skills (i.e. able to understand the nature of problems when completing the tasks given):</label>
+                        </div>
+                        <div class="assessment-options">
+                            <label><input type="radio" name="techSkillsQ2" value="1"> 1</label>
+                            <label><input type="radio" name="techSkillsQ2" value="2"> 2</label>
+                            <label><input type="radio" name="techSkillsQ2" value="3"> 3</label>
+                            <label><input type="radio" name="techSkillsQ2" value="4"> 4</label>
+                            <label><input type="radio" name="techSkillsQ2" value="5"> 5</label>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Technical Skills/Ability Question 3 -->
+                <div class="rounded-box question-box">
+                    <div class="question-row">
+                        <div class="question">
+                            <label for="techSkillsQ3">3. Able to work with minimal supervision:</label>
+                        </div>
+                        <div class="assessment-options">
+                            <label><input type="radio" name="techSkillsQ3" value="1"> 1</label>
+                            <label><input type="radio" name="techSkillsQ3" value="2"> 2</label>
+                            <label><input type="radio" name="techSkillsQ3" value="3"> 3</label>
+                            <label><input type="radio" name="techSkillsQ3" value="4"> 4</label>
+                            <label><input type="radio" name="techSkillsQ3" value="5"> 5</label>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Technical Skills/Ability Question 4 -->
+                <div class="rounded-box question-box">
+                    <div class="question-row">
+                        <div class="question">
+                            <label for="techSkillsQ4">4. Able to produce good quality of work (i.e. good problem- solving skills):</label>
+                        </div>
+                        <div class="assessment-options">
+                            <label><input type="radio" name="techSkillsQ4" value="1"> 1</label>
+                            <label><input type="radio" name="techSkillsQ4" value="2"> 2</label>
+                            <label><input type="radio" name="techSkillsQ4" value="3"> 3</label>
+                            <label><input type="radio" name="techSkillsQ4" value="4"> 4</label>
+                            <label><input type="radio" name="techSkillsQ4" value="5"> 5</label>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Technical Skills/Ability Question 5 -->
+                <div class="rounded-box question-box">
+                    <div class="question-row">
+                        <div class="question">
+                            <label for="techSkillsQ5">5. Able to solve problems independently:</label>
+                        </div>
+                        <div class="assessment-options">
+                            <label><input type="radio" name="techSkillsQ5" value="1"> 1</label>
+                            <label><input type="radio" name="techSkillsQ5" value="2"> 2</label>
+                            <label><input type="radio" name="techSkillsQ5" value="3"> 3</label>
+                            <label><input type="radio" name="techSkillsQ5" value="4"> 4</label>
+                            <label><input type="radio" name="techSkillsQ5" value="5"> 5</label>
+                        </div>
+                    </div>
+                </div>
+                <!-- Trainee Attitude Section -->
+                <div class="section">
+                    <h2>Trainee Attitude</h2>
+
+                    <!-- Trainee Attitude Question 1 -->
+                    <div class="rounded-box question-box">
+                        <div class="question-row">
+                            <div class="question">
+                                <label for="traineeAttitudeQ1">1. Demonstrates a positive and enthusiastic attitude toward the training program and tasks assigned:</label>
+                            </div>
+                            <div class="assessment-options">
+                                <label><input type="radio" name="traineeAttitudeQ1" value="1"> 1</label>
+                                <label><input type="radio" name="traineeAttitudeQ1" value="2"> 2</label>
+                                <label><input type="radio" name="traineeAttitudeQ1" value="3"> 3</label>
+                                <label><input type="radio" name="traineeAttitudeQ1" value="4"> 4</label>
+                                <label><input type="radio" name="traineeAttitudeQ1" value="5"> 5</label>
+                            </div>
+                        </div>
+                    </div>
+            </div>
+
+                    <!-- Trainee Attitude Question 2 -->
+                    <div class="rounded-box question-box">
+                        <div class="question-row">
+                            <div class="question">
+                                <label for="traineeAttitudeQ2">2. Demonstrates a willingness to learn and adapt to new challenges:</label>
+                            </div>
+                            <div class="assessment-options">
+                                <label><input type="radio" name="traineeAttitudeQ2" value="1"> 1</label>
+                                <label><input type="radio" name="traineeAttitudeQ2" value="2"> 2</label>
+                                <label><input type="radio" name="traineeAttitudeQ2" value="3"> 3</label>
+                                <label><input type="radio" name="traineeAttitudeQ2" value="4"> 4</label>
+                                <label><input type="radio" name="traineeAttitudeQ2" value="5"> 5</label>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Trainee Attitude Question 3 -->
+                    <div class="rounded-box question-box">
+                        <div class="question-row">
+                            <div class="question">
+                                <label for="traineeAttitudeQ3">3. Demonstrates effective communication skills and teamwork:</label>
+                            </div>
+                            <div class="assessment-options">
+                                <label><input type="radio" name="traineeAttitudeQ3" value="1"> 1</label>
+                                <label><input type="radio" name="traineeAttitudeQ3" value="2"> 2</label>
+                                <label><input type="radio" name="traineeAttitudeQ3" value="3"> 3</label>
+                                <label><input type="radio" name="traineeAttitudeQ3" value="4"> 4</label>
+                                <label><input type="radio" name="traineeAttitudeQ3" value="5"> 5</label>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- Trainee Attitude Question 4 -->
+                    <div class="rounded-box question-box">
+                        <div class="question-row">
+                            <div class="question">
+                                <label for="traineeAttitudeQ4">4. Demonstrates initiative and proactively seeks opportunities to contribute:</label>
+                            </div>
+                            <div class="assessment-options">
+                                <label><input type="radio" name="traineeAttitudeQ4" value="1"> 1</label>
+                                <label><input type="radio" name="traineeAttitudeQ4" value="2"> 2</label>
+                                <label><input type="radio" name="traineeAttitudeQ4" value="3"> 3</label>
+                                <label><input type="radio" name="traineeAttitudeQ4" value="4"> 4</label>
+                                <label><input type="radio" name="traineeAttitudeQ4" value="5"> 5</label>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Trainee Attitude Question 5 -->
+                    <div class="rounded-box question-box">
+                        <div class="question-row">
+                            <div class="question">
+                                <label for="traineeAttitudeQ5">5. Demonstrates a positive work ethic and consistently meets deadlines:</label>
+                            </div>
+                            <div class="assessment-options">
+                                <label><input type="radio" name="traineeAttitudeQ5" value="1"> 1</label>
+                                <label><input type="radio" name="traineeAttitudeQ5" value="2"> 2</label>
+                                <label><input type="radio" name="traineeAttitudeQ5" value="3"> 3</label>
+                                <label><input type="radio" name="traineeAttitudeQ5" value="4"> 4</label>
+                                <label><input type="radio" name="traineeAttitudeQ5" value="5"> 5</label>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- Personality and Ability Section -->
+                    <div class="section">
+                        <h2>Personality and Ability</h2>
+                        <!-- Personality and Ability Question 1 -->
+                        <div class="rounded-box question-box">
+                            <div class="question-row">
+                                <div class="question">
+                                    <label for="personalityAbilityQ1">1. Effectively communicates and collaborates with team members:</label>
+                                </div>
+                                <div class="assessment-options">
+                                    <label><input type="radio" name="personalityAbilityQ1" value="1"> 1</label>
+                                    <label><input type="radio" name="personalityAbilityQ1" value="2"> 2</label>
+                                    <label><input type="radio" name="personalityAbilityQ1" value="3"> 3</label>
+                                    <label><input type="radio" name="personalityAbilityQ1" value="4"> 4</label>
+                                    <label><input type="radio" name="personalityAbilityQ1" value="5"> 5</label>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Personality and Ability Question 2 -->
+                        <div class="rounded-box question-box">
+                            <div class="question-row">
+                                <div class="question">
+                                    <label for="personalityAbilityQ2">2. Adapts positively to changes and challenges:</label>
+                                </div>
+                                <div class="assessment-options">
+                                    <label><input type="radio" name="personalityAbilityQ2" value="1"> 1</label>
+                                    <label><input type="radio" name="personalityAbilityQ2" value="2"> 2</label>
+                                    <label><input type="radio" name="personalityAbilityQ2" value="3"> 3</label>
+                                    <label><input type="radio" name="personalityAbilityQ2" value="4"> 4</label>
+                                    <label><input type="radio" name="personalityAbilityQ2" value="5"> 5</label>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Personality and Ability Question 3 -->
+                        <div class="rounded-box question-box">
+                            <div class="question-row">
+                                <div class="question">
+                                    <label for="personalityAbilityQ3">3. Demonstrates creativity and innovation in work:</label>
+                                </div>
+                                <div class="assessment-options">
+                                    <label><input type="radio" name="personalityAbilityQ3" value="1"> 1</label>
+                                    <label><input type="radio" name="personalityAbilityQ3" value="2"> 2</label>
+                                    <label><input type="radio" name="personalityAbilityQ3" value="3"> 3</label>
+                                    <label><input type="radio" name="personalityAbilityQ3" value="4"> 4</label>
+                                    <label><input type="radio" name="personalityAbilityQ3" value="5"> 5</label>
+                                </div>
+                            </div>
+                        </div>
+                        <!-- Personality and Ability Question 4 -->
+                        <div class="rounded-box question-box">
+                            <div class="question-row">
+                                <div class="question">
+                                    <label for="personalityAbilityQ4">4. Demonstrates leadership qualities and takes initiative:</label>
+                                </div>
+                                <div class="assessment-options">
+                                    <label><input type="radio" name="personalityAbilityQ4" value="1"> 1</label>
+                                    <label><input type="radio" name="personalityAbilityQ4" value="2"> 2</label>
+                                    <label><input type="radio" name="personalityAbilityQ4" value="3"> 3</label>
+                                    <label><input type="radio" name="personalityAbilityQ4" value="4"> 4</label>
+                                    <label><input type="radio" name="personalityAbilityQ4" value="5"> 5</label>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Personality and Ability Question 5 -->
+                        <div class="rounded-box question-box">
+                            <div class="question-row">
+                                <div class="question">
+                                    <label for="personalityAbilityQ5">5. Maintains a positive and professional attitude:</label>
+                                </div>
+                                <div class="assessment-options">
+                                    <label><input type="radio" name="personalityAbilityQ5" value="1"> 1</label>
+                                    <label><input type="radio" name="personalityAbilityQ5" value="2"> 2</label>
+                                    <label><input type="radio" name="personalityAbilityQ5" value="3"> 3</label>
+                                    <label><input type="radio" name="personalityAbilityQ5" value="4"> 4</label>
+                                    <label><input type="radio" name="personalityAbilityQ5" value="5"> 5</label>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- Company Industrial Supervisor’s Comments -->
+                    <div class="input-box">
+                        <label for="supervisorComments">Company Industrial Supervisor’s Comments:</label>
+                        <textarea id="supervisorComments" name="supervisorComments" rows="4"></textarea>
+                    </div>
+
+                    <!-- Recommendation for Improvement -->
+                    <div class="input-box">
+                        <label for="improvementRecommendation">Recommendation for Improvement:</label>
+                        <textarea id="improvementRecommendation" name="improvementRecommendation" rows="4"></textarea>
+                    </div>
+
+                    <button type="submit">Submit Evaluation</button>
+        </form>
+        <div id="confirmationMessage"></div>
+    </main>
+</body>
+</html>
